@@ -6,33 +6,29 @@
     <link rel="icon" href="./assets/images/dollar-sign.png" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <!--Flexbox Container-->
-  <body>
-    <div>
-      <!--Image and Title-->
-      <img src="./assets/images/calendar.png" alt="Calendar" />
-      <h1>Monthly Bills</h1>
-      <!--Grid Container-->
-      <form class="container">
-        <!--First Grid Item-->
-        <div class="item">
-          <label>Bill Description:</label>
-          <input type="text" id="inBillDescription" required />
-        </div>
-        <!--Second Grid Item-->
-        <div class="item">
-          <label>Bill Value $:</label>
-          <input type="number" min="0" step="0.01" id="inBillValue" required />
-        </div>
-        <!--Third Grid item-->
-        <div class="register">
-          <input class="register-button" type="submit" value="Register Bill" />
-        </div>
-      </form>
-      <!--Result-->
-      <pre id="outResult1"></pre>
-      <pre id="outResult2"></pre>
-    </div>
+  <body class="container">
+    <!--Image and Title-->
+    <img class="item" src="./assets/images/calendar.png" alt="Calendar" />
+    <h1 class="item">Monthly Bills</h1>
+    <form class="item sub-container">
+      <!--Bill Description-->
+      <div class="sub-item">
+        <label>Bill Description:</label>
+        <input type="text" id="inBillDescription" required />
+      </div>
+      <!--Bill Value-->
+      <div class="sub-item">
+        <label>Bill Value:</label>
+        <input type="number" min="0" step="0.01" id="inBillValue" required />
+      </div>
+      <!--Register Bill-->
+      <div class="sub-item register">
+        <button class="register-button" type="submit">Register Bill</button>
+      </div>
+    </form>
+    <!--The Result-->
+    <pre class="item" id="outResult1"></pre>
+    <pre class="item" id="outResult2"></pre>
     <!--JavaScript-->
     <script src="js/script.js"></script>
   </body>

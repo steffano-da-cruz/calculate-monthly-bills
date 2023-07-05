@@ -1,20 +1,20 @@
-/*Flexbox Container*/
-body {
+/*Flex Container*/
+.container {
   color: #f0f1ec;
   font-family: Helvetica, sans-serif;
   background-color: #232629;
+  margin: 0;
   height: 90vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
 }
 
 /*Image and Title*/
 img {
   width: 12rem;
-  display: block;
-  margin: 0 auto 20px auto;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -24,27 +24,26 @@ h1 {
 }
 
 /*Grid Container*/
-.container {
+.sub-container {
   display: grid;
-  grid-template-rows: auto auto;
   grid-template-columns: auto auto;
-  justify-content: center;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
   gap: 20px;
 }
 
-/*Grid Items*/
-.item {
+.sub-item {
   font-weight: bold;
 }
 
+/*Register Bill*/
 .register {
-  grid-column: span 2;
-  justify-self: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  grid-column: span 2;
 }
 
-/*Register Button*/
 .register-button {
   font-size: 17px;
   font-family: Arial;
@@ -67,13 +66,14 @@ h1 {
   background: linear-gradient(#0061a7, #007dc1);
 }
 
-/*Result*/
+/*The Result*/
 pre {
   text-align: center;
   font-size: 20px;
+  margin-bottom: 0;
 }
 
-/*Media Query*/
+/*Media Queries*/
 @media (max-width: 850px) {
   body {
     text-align: center;
