@@ -8,7 +8,7 @@ let response = ""; //string with the result to be shown
 let numBills = 0;
 let billsTotal = 0;
 
-frm.addEventListener("submit", (e) => {
+frm.addEventListener("submit", function (e) {
   e.preventDefault(); //Avoid sending the form
   const billDescription = frm.inBillDescription.value; //Acquire the name of the bill
   const billValue = Number(frm.inBillValue.value); //Acquire the value of the bill
