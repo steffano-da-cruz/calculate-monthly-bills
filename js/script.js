@@ -1,26 +1,43 @@
-//Acquire the html elements
-const frm = document.querySelector("form");
-const result1 = document.querySelector("#outResult1");
-const result2 = document.querySelector("#outResult2");
+"use strict";
 
-//Global Variables (outside the block)
-let response = ""; //string with the result to be shown
-let numBills = 0;
-let billsTotal = 0;
+//Global variables
+let response = "";
+let bills = 0;
+let total = 0;
 
-frm.addEventListener("submit", function (e) {
-  e.preventDefault(); //Avoid sending the form
-  const billDescription = frm.inBillDescription.value; //Acquire the name of the bill
-  const billValue = Number(frm.inBillValue.value); //Acquire the value of the bill
+//Focus on the Bill Description field
+document.querySelector(".bill-description").focus();
+//Register button
+document.querySelector(".register").addEventListener("click", function () {
+  const billDescription = document.querySelector(".bill-description").value;
+  const billValue = Number(document.querySelector(".bill-value").value);
 
-  numBills++; //numBills = numBills + 1 (counter)
-  billsTotal += billValue; //billsTotal = billsTotal + billValue (accumulator)
-  response = response + billDescription + " - $" + billValue.toFixed(2) + "\n";
+  if (billDescription === "" || billValue < 1) {
+    alert("Fill both fields correctly...");
+  } else {
+    bills++;
+    total += billValue;
+    response = `${response} ${billDescription} - $${billValue.toFixed(2)}\n`;
+    document.querySelector(
+      ".result1"
+    ).textContent = `${response} -------------------------------`;
+    document.querySelector(
+      ".result2"
+    ).textContent = `${bills} Bill(s) - Total: $${total.toFixed(2)}`;
+  }
+  document.querySelector(".bill-description").value = "";
+  document.querySelector(".bill-value").value = "";
+  document.querySelector(".bill-description").focus();
+});
 
-  result1.innerText = `${response}-----------------------------------`;
-  result2.innerText = `${numBills} Bill(s) - Total: $${billsTotal.toFixed(2)}`;
-
-  frm.inBillDescription.value = ""; //Cleans the bill description field
-  frm.inBillValue.value = ""; //Cleans the bill value field
-  frm.inBillDescription.focus(); //Returns to the bill description field
+//Start over button
+document.querySelector(".start-over").addEventListener("click", function () {
+  document.querySelector(".bill-description").value = "";
+  document.querySelector(".bill-value").value = "";
+  document.querySelector(".bill-description").focus();
+  response = "";
+  bills = 0;
+  total = 0;
+  document.querySelector(".result1").textContent = response;
+  document.querySelector(".result2").textContent = "";
 });
