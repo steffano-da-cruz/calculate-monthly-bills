@@ -89,6 +89,10 @@ button:hover {
 
 /*Media Queries*/
 @media (max-width: 760px) {
+  body {
+    height: 70vh;
+  }
+
   section {
     flex-direction: column;
   }
@@ -99,5 +103,9 @@ button:hover {
 
   h1 {
     font-size: 3.7rem;
+  }
+
+  .description-value {
+    align-items: start;
   }
 }

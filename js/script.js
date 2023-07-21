@@ -20,7 +20,7 @@ document.querySelector(".register").addEventListener("click", function () {
     response = `${response} ${billDescription} - $${billValue.toFixed(2)}\n`;
     document.querySelector(
       ".result1"
-    ).textContent = `${response} -------------------------------`;
+    ).textContent = `${response}-------------------------------`;
     document.querySelector(
       ".result2"
     ).textContent = `${bills} Bill(s) - Total: $${total.toFixed(2)}`;
