@@ -90,7 +90,7 @@ button:hover {
 /*Media Queries*/
 @media (max-width: 760px) {
   body {
-    height: 70vh;
+    height: 90vh;
   }
 
   section {
