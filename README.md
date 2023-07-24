@@ -5,7 +5,7 @@
 A program that registers bills and their values and shows the final result.
 
 ## 🤔 How does it work?
-The user needs to type the description of the first bill (name of the bill) in the Bill Description field, then he types the value of the bill in the Bill Value field. After this, it's necessary to click on the Register Bill button to see the first result. The user can register several bills and the result will show the amount of the bills registered and the total of all the bills values. If the user wants to start again, he can click on the Start Over button.
+The user needs to fill the first field (Bill Description) with the description of the first bill (name of the bill), then he fills the second field (Bill Value) with the value of the bill. After this, it's necessary to click on the Register Bill button to see the first result. The user can register several bills and the result will show the amount of the bills registered and the total of all the bills values. If the user wants to start again, he can click on the Start Over button.
 
 ## 🛠 Technologies used
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
