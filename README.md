@@ -1,5 +1,5 @@
 # Calculate Monthly Bills
-![Monthly Bills](/assets/images/monthly-bills.png)
+![Monthly Bills](/assets/images/readme-monthly-bills.png)
 
 ## 💻 About the Project
 A program that registers bills and their values and shows the final result.
