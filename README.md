@@ -1,5 +1,5 @@
 # Calculate Monthly Bills
-![Monthly Bills](/assets/images/img-curriculum.png)
+![Monthly Bills](/assets/images/monthly-bills.png)
 
 ## 💻 About the Project
 My curriculum made using just HTML. It's a really simple way of showing my personal information, academic backgrounds and capacities. I used some tables, anchor tags, unordered lists, forms and inputs.
