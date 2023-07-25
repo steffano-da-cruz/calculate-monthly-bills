@@ -27,7 +27,7 @@ section {
   align-items: center;
 }
 
-/*Image and Title*/
+/*Image and title*/
 .image-title {
   flex-direction: column;
 }
@@ -51,7 +51,7 @@ input {
   padding: 1px 2px;
 }
 
-/*Register and Start buttons*/
+/*Register and Start Over buttons*/
 .register-start {
   gap: 1.2rem;
 }
@@ -87,7 +87,7 @@ button:hover {
   text-align: center;
 }
 
-/*Media Queries*/
+/*Media queries*/
 @media (max-width: 760px) {
   body {
     height: 90vh;
