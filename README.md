@@ -4,7 +4,7 @@
 ## 💻 About the project
 A program that registers bills and their values and shows the final result. Dont't forget to give it a go on mobile, because this webpage is responsive!
 
-## 🤔 How does it work?
+## 🤔 How it works
 The user needs to fill the first field (Bill Description) with the description of the first bill (name of the bill), then he fills the second field (Bill Value) with the value of the bill. After this, it's necessary to click on the Register Bill button to see the first result. The user can register several bills and their values (one at a time) and the result will show the amount of bills registered and the total of all the bills values. If the user wants to start again, he can click on the Start Over button.
 
 ## 🛠 Technologies used
