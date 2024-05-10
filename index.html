@@ -1,40 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculate Monthly Bills</title>
     <link rel="icon" href="./assets/images/dollar-sign.png" />
     <link rel="stylesheet" href="./css/style.css" />
+    <title>Calculate Monthly Bills</title>
   </head>
   <body>
-    <main>
-      <!--Image and Title-->
-      <section class="image-title">
-        <img src="./assets/images/calendar.png" alt="Calendar" />
-        <h1>Monthly Bills</h1>
-      </section>
-      <!--Bill Description and Bill Value fields-->
-      <section class="description-value">
-        <div>
-          <label>Bill Description:</label>
-          <input class="bill-description" type="text" />
+    <main class="container">
+      <div class="bills-info">
+        <img
+          class="bills-calendar"
+          src="./assets/images/calendar.png"
+          alt="Calendar"
+        />
+        <h1 class="bills-title">Monthly Bills</h1>
+        <div class="bills-data-box">
+          <div>
+            <label>Bill name:</label>
+            <input
+              class="bills-name-input"
+              placeholder="Only letters"
+              type="text"
+              required
+            />
+          </div>
+          <div>
+            <label>Bill value:</label>
+            <input
+              class="bills-value-input"
+              placeholder="Only numbers"
+              type="number"
+              min="0"
+              required
+            />
+          </div>
         </div>
-        <div>
-          <label>Bill Value:</label>
-          <input class="bill-value" type="number" />
+        <div class="bills-buttons-box">
+          <button class="btn register-bill-btn">Register bill</button>
+          <button class="btn start-over-btn">Start over</button>
         </div>
-      </section>
-      <!--Register and Start buttons-->
-      <section class="register-start">
-        <button class="register">Register Bill</button>
-        <button class="start-over">Start Over</button>
-      </section>
-      <!--Results-->
-      <section class="results">
-        <pre class="result1"></pre>
-        <pre class="result2"></pre>
-      </section>
+      </div>
+      <div class="bills-result-box">
+        <p class="bills-result"></p>
+      </div>
     </main>
     <script src="./js/script.js"></script>
   </body>

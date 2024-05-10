@@ -1,43 +1,84 @@
 "use strict";
 
-//Global variables
-let response = "";
-let bills = 0;
-let total = 0;
+const registerBill = document.querySelector(".register-bill-btn");
+const startOver = document.querySelector(".start-over-btn");
+const billsNameIn = document.querySelector(".bills-name-input");
+const billsValueIn = document.querySelector(".bills-value-input");
+const billsContainer = document.querySelector(".container");
+const billsResult = document.querySelector(".bills-result");
 
-//Focus on the Bill Description field
-document.querySelector(".bill-description").focus();
-//Register button
-document.querySelector(".register").addEventListener("click", function () {
-  const billDescription = document.querySelector(".bill-description").value;
-  const billValue = Number(document.querySelector(".bill-value").value);
+let billsList = "";
+let billsTotal = 0;
 
-  if (billDescription === "" || billValue < 1) {
-    alert("Fill both fields correctly...");
+const showResult = function () {
+  billsContainer.classList.add("bills-result-on");
+};
+
+const removeResult = function () {
+  billsContainer.classList.remove("bills-result-on");
+  billsResult.textContent = "";
+};
+
+const resetFields = function () {
+  billsNameIn.focus();
+  billsNameIn.value = "";
+  billsValueIn.value = "";
+};
+
+resetFields();
+
+registerBill.addEventListener("click", function () {
+  const billName = billsNameIn.value;
+  const billValue = Number(billsValueIn.value);
+
+  if (!billName || !billValue) {
+    showResult();
+    billsResult.textContent = "You must fill both fields!";
   } else {
-    bills++;
-    total += billValue;
-    response = `${response} ${billDescription} - $${billValue.toFixed(2)}\n`;
-    document.querySelector(
-      ".result1"
-    ).textContent = `${response}-------------------------------`;
-    document.querySelector(
-      ".result2"
-    ).textContent = `${bills} Bill(s) - Total: $${total.toFixed(2)}`;
+    showResult();
+
+    billsList += ` ${billName} = $${billValue.toFixed(2)}\n`;
+    billsTotal += billValue;
+
+    billsResult.textContent = `${billsList} Total = $${billsTotal.toFixed(2)}`;
+
+    resetFields();
   }
-  document.querySelector(".bill-description").value = "";
-  document.querySelector(".bill-value").value = "";
-  document.querySelector(".bill-description").focus();
 });
 
-//Start over button
-document.querySelector(".start-over").addEventListener("click", function () {
-  document.querySelector(".bill-description").value = "";
-  document.querySelector(".bill-value").value = "";
-  document.querySelector(".bill-description").focus();
-  response = "";
-  bills = 0;
-  total = 0;
-  document.querySelector(".result1").textContent = response;
-  document.querySelector(".result2").textContent = "";
+billsNameIn.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    billsValueIn.focus();
+  }
+});
+
+billsValueIn.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    const billName = billsNameIn.value;
+    const billValue = Number(billsValueIn.value);
+
+    if (!billName || !billValue) {
+      showResult();
+      billsResult.textContent = "You must fill both fields!";
+    } else {
+      showResult();
+
+      billsList += ` ${billName} = $${billValue.toFixed(2)}\n`;
+      billsTotal += billValue;
+
+      billsResult.textContent = `${billsList} Total = $${billsTotal.toFixed(
+        2
+      )}`;
+
+      resetFields();
+    }
+  }
+});
+
+startOver.addEventListener("click", function () {
+  billsList = "";
+  billsTotal = 0;
+
+  removeResult();
+  resetFields();
 });

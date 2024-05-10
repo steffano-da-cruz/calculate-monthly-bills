@@ -1,118 +1,108 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-  font-family: "Helvetica", sans-serif;
-  background-color: #232629;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 98vh;
+  background-color: #222;
+  font-family: "Helvetica", sans-serif;
 }
 
-main {
+/* REFACTORED */
+
+.bills-title,
+.bills-data-box {
+  margin-bottom: 3rem;
+}
+
+/* BUTTONS */
+
+.btn {
+  color: inherit;
+  background-color: #0b60b0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  width: 15rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #2370b8;
+}
+
+.btn:active {
+  background-color: #094d8d;
+}
+
+/* MAIN CONTENT */
+
+.bills-info {
+  margin: 21rem auto 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 1.8rem;
 }
 
-section {
+.bills-calendar {
+  width: 19.2rem;
+}
+
+.bills-title {
+  font-size: 12.2rem;
+}
+
+.bills-data-box {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 2rem;
 }
 
-/*Image and title*/
-.image-title {
+.bills-data-box label {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.bills-data-box input {
+  color: black;
+  border: none;
+  border-radius: 0.5rem;
+  height: 2.4rem;
+  padding: 0 0.6rem;
+}
+
+.bills-buttons-box {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.bills-result-on .bills-info {
+  margin: 11rem auto 0 auto;
+}
+
+.bills-result-on .bills-result-box {
+  margin: 5rem auto 0 auto;
+  height: 20rem;
+  width: 50rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.bills-result-box {
+  display: flex;
   flex-direction: column;
 }
 
-img {
-  width: 12rem;
-}
-
-h1 {
-  font-size: 7.6rem;
-}
-
-/*Bill Description and Bill Value fields*/
-.description-value {
-  font-size: 1rem;
-  font-weight: bold;
-  gap: 1.2rem;
-}
-
-input {
-  padding: 1px 2px;
-}
-
-/*Register and Start Over buttons*/
-.register-start {
-  gap: 1.2rem;
-}
-
-button {
-  font-size: 17px;
-  font-family: Arial;
-  width: 141px;
-  height: 40px;
-  border-width: 1px;
-  color: #ffffff;
-  border-color: #124d77;
-  font-weight: bold;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  box-shadow: inset 0px 1px 0px 0px #54a3f7;
-  text-shadow: inset 0px 1px 0px #154682;
-  background: linear-gradient(#007dc1, #0061a7);
-}
-
-button:hover {
-  background: linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
-  background-color: #0061a7;
-}
-
-/*Results*/
-.results {
-  flex-direction: column;
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-/*Media queries*/
-@media (max-width: 760px) {
-  body {
-    height: 90vh;
-  }
-
-  section {
-    flex-direction: column;
-  }
-
-  img {
-    width: 10rem;
-  }
-
-  h1 {
-    font-size: 3.7rem;
-  }
-
-  .description-value {
-    align-items: start;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    align-items: center;
-  }
+.bills-result {
+  color: black;
+  font-size: 2rem;
 }
