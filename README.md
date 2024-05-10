@@ -1,5 +1,5 @@
 # Calculate Monthly Bills
-![Monthly Bills](/assets/images/calculate-monthly-bills.png)
+![Monthly Bills](/assets/images/readme-monthly-bills.png)
 
 ## 💻 About the project
 A program that registers bills and their values and shows the final result. Dont't forget to give it a try on mobile, because this web page is responsive!
