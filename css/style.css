@@ -97,12 +97,12 @@ body {
   overflow-y: auto;
 }
 
-.bills-result-box {
-  display: flex;
-  flex-direction: column;
+.bills-result {
+  margin-bottom: 1rem;
 }
 
-.bills-result {
+.bills-result,
+.bills-result-2 {
   color: black;
   font-size: 2rem;
 }
