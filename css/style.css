@@ -21,6 +21,12 @@ body {
   margin-bottom: 3rem;
 }
 
+.bills-result,
+.bills-result-2 {
+  color: black;
+  font-size: 2rem;
+}
+
 /* BUTTONS */
 
 .btn {
@@ -45,7 +51,7 @@ body {
 
 /* MAIN CONTENT */
 
-.bills-info {
+.bills-interface {
   margin: 21rem auto 0 auto;
   display: flex;
   flex-direction: column;
@@ -75,7 +81,7 @@ body {
   border: none;
   border-radius: 0.5rem;
   height: 2.4rem;
-  padding: 0 0.6rem;
+  padding: 0 1rem;
 }
 
 .bills-buttons-box {
@@ -83,12 +89,12 @@ body {
   gap: 1.6rem;
 }
 
-.bills-result-on .bills-info {
+.bills-result-on .bills-interface {
   margin: 11rem auto 0 auto;
 }
 
 .bills-result-on .bills-result-box {
-  margin: 5rem auto 0 auto;
+  margin: 5rem auto 4rem auto;
   height: 20rem;
   width: 50rem;
   background-color: #fff;
@@ -101,8 +107,77 @@ body {
   margin-bottom: 1rem;
 }
 
-.bills-result,
-.bills-result-2 {
-  color: black;
-  font-size: 2rem;
+/* MEDIA QUERIES */
+
+/* 848px */
+@media (max-width: 53em) {
+  .btn {
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 16rem;
+    height: 6rem;
+    padding: 1rem;
+  }
+
+  .bills-interface {
+    margin: 15rem auto 0 auto;
+  }
+
+  .bills-title {
+    line-height: 1;
+  }
+
+  .bills-title span {
+    display: block;
+    text-align: center;
+  }
+
+  .bills-data-box input {
+    font-size: 1.6rem;
+    height: 3rem;
+  }
+
+  .bills-result-on .bills-interface {
+    margin: 5rem auto 0 auto;
+  }
+
+  .bills-result-on .bills-result-box {
+    margin: 5rem auto 4rem auto;
+    height: 20rem;
+    width: 45rem;
+  }
+}
+
+/* 672px */
+@media (max-width: 42em) {
+  .bills-interface {
+    margin: 10rem auto 0 auto;
+  }
+
+  .bills-title {
+    font-size: 10rem;
+  }
+
+  .bills-data-box {
+    flex-direction: column;
+  }
+
+  .bills-result-on .bills-result-box {
+    margin: 4rem auto 4rem auto;
+    width: 38rem;
+  }
+}
+
+/* 496px */
+@media (max-width: 31em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* 368px */
+@media (max-width: 23em) {
+  html {
+    font-size: 45%;
+  }
 }

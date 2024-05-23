@@ -52,7 +52,15 @@ registerBill.addEventListener("click", function () {
 
 billsNameIn.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
-    billsValueIn.focus();
+    const billName = billsNameIn.value;
+
+    if (!billName) {
+      showResult();
+      billsResult.textContent = "You must fill both fields!";
+      billsResult2.textContent = "";
+    } else {
+      billsValueIn.focus();
+    }
   }
 });
 
